@@ -1,0 +1,242 @@
+
+.grid {
+	position: relative;
+	list-style: none;
+	text-align: center;
+}
+
+/* Common style */
+.grid figure {
+    position: relative;
+    overflow: hidden;
+    background: #3085a3;
+    text-align: center;
+    cursor: pointer;
+    margin: 0 0 2em;
+}
+.grid figure img {
+	position: relative;
+	display: block;
+	min-height: 100%;
+	max-width: 100%;
+	opacity: 0.5;
+}
+
+.grid figure figcaption {
+	padding: 2em 2em;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 1.25em;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.grid figure figcaption::before,
+.grid figure figcaption::after {
+	pointer-events: none;
+}
+
+.grid figure figcaption,
+.grid figure figcaption > a {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* Anchor will cover the whole item by default */
+/* For some effects it will show as a button */
+.grid figure figcaption > a {
+	z-index: 1000;
+	text-indent: 200%;
+	white-space: nowrap;
+	font-size: 0;
+	opacity: 0;
+}
+
+.grid figure h2 {
+	word-spacing: -0.15em;
+	font-weight: 300;
+}
+
+.grid figure h2 span {
+    font-weight: 500;
+    font-size: 25px;
+    text-transform: capitalize;
+    color: #000;
+}
+.grid figure h2,
+.grid figure p {
+	margin: 0;
+}
+
+.grid figure p {
+	letter-spacing: 1px;
+	font-size:14px;
+}
+/*---------------*/
+/***** Roxy *****/
+/*---------------*/
+
+figure.effect-roxy {
+	background: -webkit-linear-gradient(45deg, #ff89e9 0%, #05abe0 100%);
+	background: linear-gradient(45deg, #ff89e9 0%,#05abe0 100%);
+}
+
+figure.effect-roxy img {
+	max-width: none;
+	width: -webkit-calc(100% + 60px);
+	width: calc(100% + 60px);
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: translate3d(-50px,0,0);
+	transform: translate3d(-50px,0,0);
+}
+
+figure.effect-roxy figcaption::before {
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	bottom: 30px;
+	left: 30px;
+	border: 1px solid #fff;
+	content: '';
+	opacity: 0;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: translate3d(-20px,0,0);
+	transform: translate3d(-20px,0,0);
+}
+
+figure.effect-roxy figcaption {
+	padding: 3em;
+	text-align: left;
+}
+figure.effect-roxy h2 {
+    padding: 54px 0 10px 0;
+    font-size: 27px;
+    font-weight: 800;
+    color: #ffffff;
+}
+figure.effect-roxy p {
+	opacity: 0;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: translate3d(-10px,0,0);
+	transform: translate3d(-10px,0,0);
+}
+
+figure.effect-roxy:hover img {
+	opacity: 0.7;
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+figure.effect-roxy:hover figcaption::before,
+figure.effect-roxy:hover p {
+	opacity: 1;
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+/*---------------*/
+@media screen and (max-width: 50em) {
+	.content {
+		padding: 0 10px;
+		text-align: center;
+	}
+}
+
+/*--responsive--*/
+@media(max-width:1920px){
+	
+}
+@media(max-width:1680px){
+	
+}
+@media(max-width:1600px){
+	
+}
+@media(max-width:1440px){
+
+}
+@media(max-width:1366px){
+
+}
+@media(max-width:1280px){
+	
+}
+@media(max-width:1080px){
+	figure.effect-roxy h2 {
+    font-size: 24px;
+	}
+	.grid figure p {
+    font-size: 13px;
+    line-height: 21px;
+}
+figure.effect-roxy figcaption {
+    padding: 2em;
+}
+}
+@media(max-width:1050px){
+	
+}
+@media(max-width:1024px){
+	
+}
+@media(max-width:991px){
+figure.effect-roxy h2 {
+    padding: 23px 0 10px 0;
+}
+.grid figure h2 span {
+    font-size: 21px;
+}
+figure.effect-roxy h2 {
+    font-size: 22px;
+}
+}
+@media(max-width:900px){
+	
+}
+@media(max-width:800px){
+	
+}
+@media(max-width:768px){
+	
+}
+@media(max-width:767px){
+}
+@media(max-width:736px){
+
+}
+@media(max-width:667px){
+	
+}
+@media(max-width:640px){
+	
+}
+@media(max-width:600px){
+
+}
+@media(max-width:568px){
+
+}
+@media(max-width:480px){
+
+}
+@media(max-width:440px){
+	
+}
+@media(max-width:414px){
+	
+}
+@media(max-width:384px){
+
+}
+@media(max-width:375px){	
+}
+@media(max-width:320px){
+
+}
+/*--//responsive--*/
